@@ -19,6 +19,13 @@ const breedData = function () {
         console.log(data);
         //to check the type of data after its parsed
         console.log(typeof data);
+        // Access the first entry in the data array and print out the description for the user.
+        if (data.length > 0) {
+          console.log("First entry description: ", data[0].description);
+        } else {
+          console.log("Breed data not found.")
+        }
+
       //if there's an error while parsing json string, log it to the console
       } catch (parseErr) {
         console.log("Error while parsing JSON body: ", parseErr)
