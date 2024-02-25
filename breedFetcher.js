@@ -12,10 +12,10 @@ const fetchBreedDescription = function(breedName, callback) {
   request(apiUrl, (error, response, body) => {
     if (error) {
       //call callback with error if error occurs
-      callback(new Error("Error Occurred: "+ error), null);
+      callback(new Error("Error Occurred: " + error), null);
       //if status code is any other than 200, call the callback with error
     } else if (response.statusCode !== 200) {
-      callback(new Error("Status Code Error: "+ response.statusCode), null);
+      callback(new Error("Status Code Error: " + response.statusCode), null);
     } else {
       try {
         //to convert the json string to an object
